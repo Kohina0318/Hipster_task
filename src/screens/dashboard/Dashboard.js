@@ -2,8 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import {
   View,
   StatusBar,
-  ScrollView, Image,
-  Text, TouchableOpacity, TextInput, Animated
 } from 'react-native';
 import { useSelector } from 'react-redux';
 import { MyThemeClass } from '../../components/Theme/ThemeDarkLightColor';
@@ -32,7 +30,6 @@ export default function Dashboard(props) {
   const handleUsers = async () => {
     try {
       var res = await getUsers(getOffset, "10");
-      console.log("huuiiiuo..getOffset...",getOffset)
       if (res.success === true) {
         if (res.users.length > 0) {
           setIsLoading(true)
@@ -65,7 +62,7 @@ export default function Dashboard(props) {
     <View style={{ ...styles.bg, backgroundColor: themecolor.THEMECOLOR1 }}>
       <StatusBar
         translucent
-        backgroundColor="transparent"
+        backgroundColor={themecolor.LOGINTHEMECOLOR1}
         barStyle={mode === 'dark' ? 'light-content' : 'dark-content'}
       />
 
@@ -79,7 +76,7 @@ export default function Dashboard(props) {
               <UsersFlateList data={userData} handleUsers={handleUsers} isLoading={isLoading} setOffset={setOffset} />
             :
             <NoDataMsg title="No Data found !" />}
-             <View style={{ marginVertical: 45 }} />
+             <View style={{ marginVertical: 44 }} />
         </View>
       )}
     </View>

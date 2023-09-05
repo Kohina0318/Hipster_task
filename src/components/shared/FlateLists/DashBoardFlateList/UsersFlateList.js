@@ -1,4 +1,4 @@
-import React, { useEffect, useState ,PureComponent} from 'react';
+import React, { useEffect, useState, PureComponent } from 'react';
 import {
     View,
     FlatList,
@@ -18,7 +18,7 @@ function UserDataFlateList({ item, themecolor, }) {
         <View
             style={{
                 ...styles.container,
-                backgroundColor: themecolor.BOXBORDERCOLOR,
+                backgroundColor: themecolor.THEMECOLOR1,
                 borderColor: themecolor.BOXBORDERCOLOR1,
             }}
         >
@@ -26,13 +26,10 @@ function UserDataFlateList({ item, themecolor, }) {
                 <View style={{ ...styles.imgCon, borderColor: themecolor.BOXBORDERCOLOR1, }}>
                     <Image
                         style={{
-                            width: "100%",
-                            height: "100%",
-                            resizeMode: 'contain',
-                            borderRadius:100
+                            ...styles.imginn
                         }}
-                        source={{uri:item.profile_picture}}
-                        // source={require('../../../../assets/images/profile.png')}
+                        source={{ uri: item.profile_picture }}
+                    // source={require('../../../../assets/images/profile.png')}
                     />
                 </View>
             </View>
@@ -62,8 +59,8 @@ export function UsersFlateList(props) {
     const themecolor = new MyThemeClass(mode).getThemeColor();
 
     const handleEndReached = () => {
-            props.handleUsers();
-        
+        props.handleUsers();
+
     };
 
     return (
@@ -75,14 +72,14 @@ export function UsersFlateList(props) {
             showsVerticalScrollIndicator={false}
             scrollEnabled={true}
             onEndReached={handleEndReached}
-              onEndReachedThreshold={0.1} 
-              ListFooterComponent={() => {
+            onEndReachedThreshold={0.1}
+            ListFooterComponent={() => {
                 if (props.isLoading && props.data.length > 9) {
-                  return (
-                    <LoadingContent />
-                  );
+                    return (
+                        <LoadingContent />
+                    );
                 } else {
-                  return null;
+                    return null;
                 }
             }}
         />

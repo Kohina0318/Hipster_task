@@ -9,8 +9,8 @@ const styles = StyleSheet.create({
   bdContainter: {
     justifyContent: 'center',
     alignSelf: 'center',
-    alignItems:"center",
-    marginTop:5,
+    alignItems: "center",
+    marginTop: 2,
   },
   container: {
     width: width * 0.93,
@@ -21,16 +21,22 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1.5,
     display: "flex",
     marginBottom: 1,
-  }, 
-  innerCon:{
-    width:"30%",
   },
-  imgCon:{
-   width:width*0.2, height:width*0.2, borderRadius:100,borderWidth:1.2,overflow:'hidden'
-},
+  innerCon: {
+    width: "30%",
+  },
+  imgCon: {
+    width: width * 0.19, height: width * 0.19, borderRadius: 100, borderWidth: 1.2, overflow: 'hidden'
+  },
+  imginn: {
+    width: "100%",
+    height: "100%",
+    resizeMode: 'contain',
+    borderRadius: 100
+  },
 
-  innerCon1:{
-    width:"70%"
+  innerCon1: {
+    width: "70%"
   },
   smalltxt: {
     fontFamily: FontFamily.Popinssemibold,
@@ -41,11 +47,11 @@ const styles = StyleSheet.create({
   mgT10: {
     marginTop: 10
   },
-  
+
   mgt3: {
     marginTop: 4
   },
-  
+
   headtxtbold: {
     fontSize: FontSize.labelText5,
     fontFamily: FontFamily.PopinsRegular,
@@ -79,7 +85,7 @@ const styles = StyleSheet.create({
     fontFamily: FontFamily.PopinsRegular,
     color: Colors.black,
   },
- 
+
 });
 
 export { styles };

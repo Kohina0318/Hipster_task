@@ -27,13 +27,13 @@ export default function Header(props) {
     <View
       style={{
         ...styles.mainView,
-        backgroundColor:  themecolor.HEADERTHEMECOLOR,
+        backgroundColor:  themecolor.LOGINTHEMECOLOR1,
         borderBottomColor:themecolor.BOXBORDERCOLOR1
       }}>
 
       <StatusBar
         translucent
-        backgroundColor={themecolor.HEADERTHEMECOLOR}
+        backgroundColor={themecolor.LOGINTHEMECOLOR1}
         barStyle={themecolor.STATUSEBARCONTENT}
       />
 
@@ -82,11 +82,7 @@ export default function Header(props) {
               <View style={{ ...styles.iconTitle1, }}>
                 <Image
                   style={{
-                    width: width*0.3,
-                    height:height*0.08,
-                    resizeMode: 'contain',
-                    top:5,
-
+                    ...styles.imgtitle
                   }}
                   source={require('../../../assets/images/logoFull.png')}
                 />

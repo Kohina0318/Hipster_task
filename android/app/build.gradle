@@ -180,6 +180,17 @@ dependencies {
 
  implementation "com.facebook.react:react-native:^0.71.3!"
 
+  implementation(project(':react-native-onesignal')){
+      exclude group: 'com.google.android.gms'
+  }
+
+  implementation(project(':react-native-maps')){
+      exclude group: 'com.google.android.gms'
+  }
+  implementation 'com.google.android.gms:play-services-base:18.0.1'
+  implementation 'com.google.android.gms:play-services-location:19.0.1'
+  implementation 'com.google.android.gms:play-services-maps:18.0.2'
+
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}")
     debugImplementation("com.facebook.flipper:flipper-network-plugin:${FLIPPER_VERSION}") {
         exclude group:'com.squareup.okhttp3', module:'okhttp'
@@ -191,6 +202,8 @@ dependencies {
     } else {
         implementation jscFlavor
     }
+
+
 }
 
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
