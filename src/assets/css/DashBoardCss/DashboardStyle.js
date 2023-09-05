@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignSelf: 'center',
     alignItems: "center",
-    marginTop: 5,
+    marginTop: 2,
   },
   container: {
     width: width * 0.93,

@@ -34,7 +34,7 @@ export default function Map(props) {
         PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION);
 
       if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-        console.log('You can use the Location');
+        // console.log('You can use the Location');
         getLocation()
       } else {
         console.log('Location permission denied');
@@ -54,8 +54,8 @@ export default function Map(props) {
   const getLocation = () => {
     Geolocation.getCurrentPosition(
       (position) => {
-        console.log(position);
-        setShowMarker(!showMarker)
+        // console.log(position);
+        setShowMarker(true)
         setMlLat(position.coords.latitude)
         setMLong(position.coords.longitude)
       },
@@ -75,9 +75,7 @@ export default function Map(props) {
       [
         {
           text: 'OK',
-          onPress: () => {
-            // Handle OK button press if needed
-          },
+          onPress: () => { },
         },
       ],
       { cancelable: false }
@@ -85,10 +83,10 @@ export default function Map(props) {
   };
 
   return (
-    <View style={{ ...styles.bg, backgroundColor: themecolor.THEMECOLOR }}>
+    <View style={{ ...styles.bg, backgroundColor: themecolor.THEMECOLOR1 }}>
       <StatusBar
         translucent
-        backgroundColor="transparent"
+        backgroundColor={themecolor.LOGINTHEMECOLOR1}
         barStyle={mode === 'dark' ? 'light-content' : 'dark-content'}
       />
 
@@ -104,7 +102,7 @@ export default function Map(props) {
             <View style={styles.container}>
               <MapView
                 provider={PROVIDER_GOOGLE}
-                style={styles.map}
+                style={{...styles.map, backgroundColor:themecolor.THEMECOLOR1}}
                 region={{
                   latitude: mLat,
                   longitude: mLong,
@@ -125,8 +123,8 @@ export default function Map(props) {
             </View>
 
             <View style={styles.floatbtnCon}>
-              <TouchableOpacity activeOpacity={0.5} style={{ ...styles.floatButton, backgroundColor:themecolor.BOXBORDERCOLOR }} onPress={() => requestCameraPermission()} >
-                <MI name="my-location" size={30} color={"#000"} />
+              <TouchableOpacity activeOpacity={0.5} style={{ ...styles.floatButton, backgroundColor:themecolor.TXTWHITE1 }} onPress={() => requestCameraPermission()} >
+                <MI name="my-location" size={30} color={themecolor.TXTWHITE} />
               </TouchableOpacity>
             </View>
 

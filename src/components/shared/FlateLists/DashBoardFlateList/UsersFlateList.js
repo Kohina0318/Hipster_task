@@ -18,7 +18,7 @@ function UserDataFlateList({ item, themecolor, }) {
         <View
             style={{
                 ...styles.container,
-                backgroundColor: themecolor.BOXBORDERCOLOR,
+                backgroundColor: themecolor.THEMECOLOR1,
                 borderColor: themecolor.BOXBORDERCOLOR1,
             }}
         >

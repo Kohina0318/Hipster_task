@@ -107,6 +107,12 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     // alignItems: 'center',
   },
+  imgtitle:{
+    width: width*0.3,
+    height:height*0.08,
+    resizeMode: 'contain',
+    top:5,
+  },
   iconTitle2: {
     width: width * 0.8,
     alignSelf:'center',

@@ -149,8 +149,8 @@ const MainNavigatorstyle = StyleSheet.create({
     view2: {
         alignSelf: 'center',
         alignContent: 'flex-end',
-        // bottom: 0,
-        // position: "absolute",
+        bottom: 0,
+        position: "absolute",
         width: '100%',
     },
     view2txt: {
@@ -176,7 +176,7 @@ const MainNavigatorstyle = StyleSheet.create({
         width: width*0.8, padding: 15, flexDirection:"row", marginTop:-5,
     }, 
     imgCon:{
-        backgroundColor:"#fff",padding:5, margin:5,width:width*0.25, height:width*0.25, alignItems:"center", borderRadius:100,borderWidth:1,overflow:'hidden'
+        backgroundColor:"#fff",padding:5, margin:5,width:width*0.25, height:width*0.25, alignItems:"center", borderRadius:100,borderWidth:2,overflow:'hidden',borderColor:"#fff"
     },
     levelCon:{
         width: "80%", left: 5, borderRadius: 20

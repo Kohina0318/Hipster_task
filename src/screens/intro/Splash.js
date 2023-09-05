@@ -34,7 +34,7 @@ export default function Splash(props) {
 
       <StatusBar
         translucent
-        backgroundColor={themecolor.HEADERTHEMECOLOR}
+        backgroundColor={themecolor.LOGINTHEMECOLOR1}
         barStyle={themecolor.STATUSEBARCONTENT}
       />
 
