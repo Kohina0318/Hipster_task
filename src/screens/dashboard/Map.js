@@ -99,7 +99,7 @@ export default function Map(props) {
         <>
           <View style={{ ...styles.bdContainter }} >
 
-            <View style={styles.container}>
+            <View style={{...styles.container,backgroundColor:themecolor.THEMECOLOR1}}>
               <MapView
                 provider={PROVIDER_GOOGLE}
                 style={{...styles.map, backgroundColor:themecolor.THEMECOLOR1}}

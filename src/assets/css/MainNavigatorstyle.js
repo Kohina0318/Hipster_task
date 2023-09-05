@@ -152,10 +152,14 @@ const MainNavigatorstyle = StyleSheet.create({
         bottom: 0,
         position: "absolute",
         width: '100%',
+        height:25,
+        backgroundColor:"red"
     },
     view2txt: {
         color: Colors.bluetheme,
         textAlign: 'center',
+        justifyContent:"center",
+        alignItems:"center",
         fontSize: 13,
     },
     DrawerContentSView: {

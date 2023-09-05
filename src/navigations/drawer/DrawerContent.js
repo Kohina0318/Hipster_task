@@ -41,7 +41,7 @@ export default function DrawerContent(props) {
       }}>
       <StatusBar
         translucent
-        backgroundColor={themecolor.HEADERTHEMECOLOR}
+        backgroundColor={themecolor.LOGINTHEMECOLOR1}
         barStyle={themecolor.STATUSEBARCONTENT}
       />
       <View style={MainNavigatorstyle.userinfo1}>
@@ -126,22 +126,7 @@ export default function DrawerContent(props) {
           </TouchableOpacity>
         </ScrollView>
 
-        <View style={{ marginVertical: 7 }} />
-
-        <View style={MainNavigatorstyle.view2}>
-          <View
-            style={{
-              ...MainNavigatorstyle.Borderline,
-              borderWidth: 1,
-              borderColor: themecolor.BOXBORDERCOLOR1,
-            }}
-          />
-          <View style={{ marginVertical: 3 }} />
-          <Text allowFontScaling={false} style={{ ...MainNavigatorstyle.view2txt }}>App Version 1.0</Text>
-          <View style={{ marginVertical: 3 }} />
         </View>
-
-      </View>
     </DrawerContentScrollView>
   );
 }
