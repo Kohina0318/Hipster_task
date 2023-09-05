@@ -46,7 +46,7 @@ export default function DrawerContent(props) {
       />
       <View style={MainNavigatorstyle.userinfo1}>
 
-        <ImageBackground source={require("../../assets/images/bgimg.png")} resizeMode='stretch' imageStyle={{ opacity: 0.8, backgroundColor: "#0AB3AE" }}
+        <ImageBackground source={require("../../assets/images/bgimg.png")} resizeMode='stretch' imageStyle={{ opacity: 0.8, backgroundColor: "#81ecec" }}
           style={{ ...MainNavigatorstyle.profilecontainer }}>
           <View style={{ width: "75%", }}>
             <View style={{ ...MainNavigatorstyle.imgCon, borderColor: themecolor.BOXBORDERCOLOR1 }}>
