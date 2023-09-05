@@ -1,6 +1,5 @@
 import React, { useEffect, useState ,PureComponent} from 'react';
 import {
-    TouchableOpacity,
     View,
     FlatList,
     Text,
